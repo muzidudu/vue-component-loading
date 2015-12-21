@@ -1,0 +1,21 @@
+{
+  "name": "vue-loading",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "build": "browserify -t vueify -e ./examples/index.js > ./examples/index.build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Guo Kai(PaulGuo)",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^1.0.12",
+    "vue-hot-reload-api": "^1.2.2",
+    "vueify": "^8.0.0",
+    "vueify-insert-css": "^1.0.0"
+  }
+}
