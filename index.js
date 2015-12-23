@@ -33,6 +33,10 @@ Vue.component('vue-loading', {
 
         hide: function() {
             this.isShow = false;
+        },
+
+        toggle: function() {
+            this.isShow = !this.isShow;
         }
     },
 
@@ -43,6 +47,10 @@ Vue.component('vue-loading', {
 
         'vue-loading-hide': function() {
             this.hide();
+        },
+
+        'vue-loading-toggle': function() {
+            this.toggle();
         }
     }
 });
