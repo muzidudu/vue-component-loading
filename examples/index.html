@@ -26,8 +26,9 @@
 <div id="mth5v0" class="content">
     <div id="bodyCont" class="screen-wrap fullscreen" tpl-ref="" :is-loading-show="false">
         <!-- 内容区域 -->
-        <vue-loading toast-text="加载中" :is-show="isLoadingShow"></vue-loading>
-        <input type="button" @click="showLoading()" value="显示加载浮层">
+        <vue-loading toast-text="加载中" :is-show="isLoadingShow" :skin="loadingSkin"></vue-loading>
+        <input type="button" @click="showLoading()" value="显示加载浮层（普通）">
+        <input type="button" @click="showLoading('meituan')" value="显示加载浮层（小团）">
     </div>
 </div>
 

@@ -5,12 +5,17 @@ var demo = new Vue({
     el: '#bodyCont',
 
     props: {
-        isLoadingShow: Boolean
+        isLoadingShow: Boolean,
+        loadingSkin: String
     },
 
     data: {
-        showLoading: function() {
+        showLoading: function(skin) {
             this.isLoadingShow = true;
+
+            if(skin) {
+                this.loadingSkin = skin;
+            }
         },
 
         hideLoading: function() {

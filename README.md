@@ -35,3 +35,13 @@
 | vue-loading-show | 显示加载浮层 |
 | vue-loading-hide | 隐藏加载浮层 |
 | vue-loading-toggle | 交替展示和隐藏加载浮层 |
+
+### 使用截图
+
+#### 普通样式
+
+![](http://ww3.sinaimg.cn/large/62755f82jw1ez9m4dweapj208o0gpt8r.jpg)
+
+#### 小团样式
+
+![](http://ww2.sinaimg.cn/large/62755f82jw1ez9m48f6gtj208q0gpmx8.jpg)
