@@ -7,7 +7,7 @@
     "example": "examples"
   },
   "scripts": {
-    "build": "browserify -t vueify -e ./examples/index.js > ./examples/index.build.js",
+    "build": "browserify -t vueify -e ./examples/index.js > ./examples/index.build.js && cp -rp ./index.css ./examples/index.build.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Guo Kai(PaulGuo)",

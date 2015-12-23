@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>页面标题</title>
+    <title>Vue-Loading Component</title>
     <noscript><meta http-equiv="refresh" content="0; URL=http://m.meituan.com/?ndr"></noscript>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -24,14 +24,16 @@
 <body>
 
 <div id="mth5v0" class="content">
-    <div id="bodyCont" class="screen-wrap fullscreen" tpl-ref="">
+    <div id="bodyCont" class="screen-wrap fullscreen" tpl-ref="" :is-loading-show="false">
         <!-- 内容区域 -->
-        <vue-loading></vue-loading>
+        <vue-loading toast-text="加载中" :is-show="isLoadingShow"></vue-loading>
+        <span @click="showLoading()">显示加载</span>
     </div>
 </div>
 
-<link rel="stylesheet" href="../index.css">
+<link rel="stylesheet" href="index.build.css">
 <script type="text/javascript" src="index.build.js"></script>
+
 <script type="text/javascript">
     (function(){
         // 代码区域
