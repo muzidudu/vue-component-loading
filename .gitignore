@@ -13,4 +13,3 @@ build/
 *.map
 .sass-cache
 node_modules/
-*.css
