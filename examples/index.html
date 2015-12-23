@@ -27,7 +27,7 @@
     <div id="bodyCont" class="screen-wrap fullscreen" tpl-ref="" :is-loading-show="false">
         <!-- 内容区域 -->
         <vue-loading toast-text="加载中" :is-show="isLoadingShow"></vue-loading>
-        <span @click="showLoading()">显示加载</span>
+        <input type="button" @click="showLoading()" value="显示加载浮层">
     </div>
 </div>
 
