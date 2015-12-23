@@ -26,7 +26,8 @@ Vue.component('vue-loading', {
     template: `
         <div class="js-toast-container" id="page-loader" v-if="isShow">
             <div class="com-toast">
-                <div class="com-toast-text">
+                <div class="meituan-loading" v-if="skin === 'meituan'"></div>
+                <div class="com-toast-text" v-else>
                     <span class="com-toast-icon com-icon" com-mode="toast-loading"></span> {{ toastText }}
                 </div>
             </div>
@@ -35,7 +36,8 @@ Vue.component('vue-loading', {
 
     props: {
         isShow: Boolean,
-        toastText: String
+        toastText: String,
+        skin: String
     },
 
     data: function () {
