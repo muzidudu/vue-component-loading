@@ -1,15 +1,24 @@
-## Vue-Loading
+## Vue-Component-Loading
 
 ### 使用示例
 
 ```
-<link rel="stylesheet" href="index.build.css">
-<script type="text/javascript" src="index.build.js"></script>
+<script type="text/javascript" src="build/vue.min.js"></script>
+<script type="text/javascript" src="build/standalone.js"></script>
 
 <div id="bodyCont" :is-loading-show="false">
     <vue-loading toast-text="加载中" :is-show="isLoadingShow"></vue-loading>
-    <input type="button" @click="showLoading()" value="显示加载浮层">
+    <input type="button" @click="isLoadingShow=true" value="显示加载浮层">
 </div>
+
+<script type="text/javascript">
+    new Vue({
+        el: '#bodyCont',
+        props: {
+            isLoadingShow: Boolean
+        }
+    });
+</script>
 ```
 
 ### Directive支持的属性(Props)

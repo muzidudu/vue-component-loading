@@ -1,5 +1,5 @@
 {
-  "name": "vue-loading",
+  "name": "vue-componnet-loading",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "example": "examples"
   },
   "scripts": {
-    "build": "browserify -t vueify -e ./examples/index.js > ./examples/index.build.js && cp -rp ./index.css ./examples/index.build.css",
+    "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Guo Kai(PaulGuo)",
@@ -17,5 +17,11 @@
     "vue-hot-reload-api": "^1.2.2",
     "vueify": "^8.0.0",
     "vueify-insert-css": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean": "^0.3.1",
+    "gulp-rename": "^1.2.2"
   }
 }

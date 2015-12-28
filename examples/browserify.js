@@ -1,8 +1,12 @@
 var Vue = require('vue');
-var VueLoading = require('../index.js');
+var VueLoading = require('../src/index.vue');
 
 var demo = new Vue({
     el: '#bodyCont',
+
+    components: {
+        'vue-loading': VueLoading
+    },
 
     props: {
         isLoadingShow: Boolean,

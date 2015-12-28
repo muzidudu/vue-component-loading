@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="en" style="font-size: 312.5%">
 <head>
     <meta charset="utf-8">
     <title>Vue-Loading Component</title>
@@ -20,26 +20,27 @@
     <link rel="apple-touch-icon-precomposed" sizes="196x196" href="http://mc.meituan.net/touch/img/startup/apple-touch-icon-196x196-precomposed.png">
     <link rel="apple-touch-startup-image" media="(device-height:568px)" href="http://mc.meituan.net/touch/img/startup/apple-touch-startup-image-640x1096.png">
     <link rel="apple-touch-startup-image" media="(device-height:480px)" href="http://mc.meituan.net/touch/img/startup/apple-touch-startup-image-640x920.png">
+    <script type="text/javascript" src="../build/vue.min.js"></script>
+    <script type="text/javascript" src="../build/standalone.js"></script>
 </head>
 <body>
 
 <div id="mth5v0" class="content">
-    <div id="bodyCont" class="screen-wrap fullscreen" tpl-ref="" :is-loading-show="false">
-        <!-- 内容区域 -->
-        <vue-loading toast-text="加载中" :is-show="isLoadingShow" :skin="loadingSkin"></vue-loading>
-        <input type="button" @click="showLoading()" value="显示加载浮层（普通）">
-        <input type="button" @click="showLoading('meituan')" value="显示加载浮层（小团）">
+    <div id="bodyCont" :is-loading-show="false">
+        <vue-loading toast-text="加载中" :is-show="isLoadingShow"></vue-loading>
+        <input type="button" @click="isLoadingShow=true" value="显示加载浮层">
     </div>
 </div>
 
-<link rel="stylesheet" href="index.build.css">
-<script type="text/javascript" src="index.build.js"></script>
-
 <script type="text/javascript">
-    (function(){
-        // 代码区域
-    })();
+    new Vue({
+        el: '#bodyCont',
+        props: {
+            isLoadingShow: Boolean
+        }
+    });
 </script>
 
 </body>
 </html>
+
