@@ -20,6 +20,44 @@
     <link rel="apple-touch-icon-precomposed" sizes="196x196" href="http://mc.meituan.net/touch/img/startup/apple-touch-icon-196x196-precomposed.png">
     <link rel="apple-touch-startup-image" media="(device-height:568px)" href="http://mc.meituan.net/touch/img/startup/apple-touch-startup-image-640x1096.png">
     <link rel="apple-touch-startup-image" media="(device-height:480px)" href="http://mc.meituan.net/touch/img/startup/apple-touch-startup-image-640x920.png">
+    <script type="text/javascript">
+        (function() {
+            var isIPhone = window.navigator.appVersion.match(/iphone/gi);
+            var devicePixelRatio = window.devicePixelRatio;
+            var dpr = 1;
+
+            if (isIPhone) {
+                if (devicePixelRatio >= 3) {
+                    dpr = 3;
+                } else if (devicePixelRatio >= 2) {
+                    dpr = 2;
+                }
+            }
+
+            var scale = 1 / dpr;
+            var metaViewport = '<meta name="viewport" content="initial-scale=' + scale + ', maximum-scale=' + scale +', minimum-scale=' + scale + ', user-scalable=no, width=device-width, shrink-to-fit=no" />';
+
+            document.write(metaViewport);
+
+            var docEl = document.documentElement;
+            var width = docEl.getBoundingClientRect().width;
+            if (width / dpr > 450) width = dpr * 450;
+            var rem = width / 6.4;
+
+            docEl.style.fontSize = rem + 'px';
+        })();
+    </script>
+
+    <style>
+        input[type="button"] {
+            -webkit-appearance: button;
+            font-size: .30rem;
+        }
+
+        .fullscreen {
+            position: relative;
+        }
+    </style>
 </head>
 <body>
 
@@ -28,6 +66,7 @@
         <vue-loading toast-text="加载中" :is-show="isLoadingShow" :skin="loadingSkin"></vue-loading>
         <input type="button" @click="showLoading()" value="显示加载浮层（普通）">
         <input type="button" @click="showLoading('meituan')" value="显示加载浮层（小团）">
+        <div style="height: 20rem;"></div>
     </div>
 </div>
 
