@@ -179,19 +179,15 @@
 <script>
     module.exports = {
         props: {
-            isShow: Boolean,
-            toastText: String,
+            isShow: {
+                type: Boolean,
+                default: false
+            },
+            toastText: {
+                type: String,
+                default: '加载中'
+            },
             skin: String
-        },
-
-        data: function () {
-            var toastText = '加载中';
-            var isShow = false;
-
-            return {
-                isShow: this.isShow || isShow,
-                toastText: this.toastText || toastText
-            };
         },
 
         methods: {
