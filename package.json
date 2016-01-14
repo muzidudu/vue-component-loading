@@ -19,9 +19,11 @@
     "vueify-insert-css": "^1.0.0"
   },
   "devDependencies": {
+    "eslint-config-hfe": "^1.0.5",
     "gulp": "^3.9.0",
     "gulp-browserify": "^0.5.1",
     "gulp-clean": "^0.3.1",
+    "gulp-eslint": "^1.1.1",
     "gulp-rename": "^1.2.2"
   }
 }

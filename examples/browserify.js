@@ -14,16 +14,18 @@ var demo = new Vue({
     },
 
     data: {
-        showLoading: function(skin) {
+        showLoading: function (skin) {
             this.isLoadingShow = true;
 
-            if(skin) {
+            if (skin) {
                 this.loadingSkin = skin;
             }
         },
 
-        hideLoading: function() {
+        hideLoading: function () {
             this.isLoadingShow = false;
         }
     }
 });
+
+console.log(demo);
