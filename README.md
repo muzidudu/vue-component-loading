@@ -49,8 +49,8 @@
 
 #### 普通样式
 
-![](http://ww3.sinaimg.cn/large/62755f82jw1ez9m4dweapj208o0gpt8r.jpg)
+![http://ww3.sinaimg.cn/large/62755f82jw1ez9m4dweapj208o0gpt8r.jpg](http://ww3.sinaimg.cn/large/62755f82jw1ez9m4dweapj208o0gpt8r.jpg)
 
 #### 小团样式
 
-![](http://ww2.sinaimg.cn/large/62755f82jw1ez9m48f6gtj208q0gpmx8.jpg)
+![http://ww2.sinaimg.cn/large/62755f82jw1ez9m48f6gtj208q0gpmx8.jpg](http://ww2.sinaimg.cn/large/62755f82jw1ez9m48f6gtj208q0gpmx8.jpg)
